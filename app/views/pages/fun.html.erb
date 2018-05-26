@@ -1,2 +1,24 @@
-<h1>Pages#fun</h1>
-<p>Find me in app/views/pages/fun.html.erb</p>
+<h1>Fun</h1>
+
+<div class='container'>
+  <div class='calculator'>
+    <h2>Calculator</h2>
+    <form>
+      <div class='number-fields'>
+        <input type='text' id='num1' placeholder="First Number">
+        <input type='text' id='num2' placeholder="Second Number">
+      </div>
+      <div class='buttons'>
+        <button id='add' onclick="add()">+</button>
+        <button id='sub' onclick="sub()">-</button>
+        <button id='mult' onclick="mult()">*</button>
+        <button id='div' onclick="div()">/</button>
+      </div>
+      <div class='calc-output'>
+        <h2 id='calc-out'></h2>
+      </div>
+    </form>
+  </div>
+
+</div>
+

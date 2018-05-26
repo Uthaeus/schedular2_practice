@@ -1,25 +1,50 @@
+$(document).ready(function() {
 
+  let adds = document.getElementById('add');
+  let subs = document.getElementById('sub');
+  let mults = document.getElementById('mult');
+  let divs = document.getElementById('div');
 
-function add() {
-  let num1 = document.getElementById('num1').value;
-  let num2 = document.getElementById('num2').value;
-  let output = document.getElementById('calc-out');
-  var result = num1 + num2;
+  adds.addEventListener('click', add);
+  subs.addEventListener('click', sub);
+  mults.addEventListener('click', mult);
+  divs.addEventListener('click', div);
 
-  output.textContent = result;
+  function add() {
+    let num1 = document.querySelector('#num1').value;
+    let num2 = document.querySelector('#num2').value;
+    let output = document.querySelector('#calc-out');
 
-}
-
-function sub() {
-  let num1 = document.getElementById('num1');
-  let num2 = document.getElementById('num2');
-  let output = document.getElementById('calc-out');
-  var result = 0;
-  if (num1 > num2) {
-    result = num1 - num2;
-  } else {
-    result = num2 - num1;
+    let result = +num1 + +num2;
+    output.textContent = result;
   }
 
-  output.textContent = result;
-}
+  function sub() {
+    let num1 = document.querySelector('#num1').value;
+    let num2 = document.querySelector('#num2').value;
+    let output = document.querySelector('#calc-out');
+    let result = +num1 - +num2;
+
+    output.textContent = result;
+  }
+
+  function mult() {
+    let num1 = document.querySelector('#num1').value;
+    let num2 = document.querySelector('#num2').value;
+    let output = document.querySelector('#calc-out');
+    let result = +num1 * +num2;
+
+    output.textContent = result;
+  }
+
+  function div() {
+    let num1 = document.querySelector('#num1').value;
+    let num2 = document.querySelector('#num2').value;
+    let output = document.querySelector('#calc-out');
+    let result = +num1 / +num2;
+
+    output.textContent = result;
+  }
+
+});
+
